@@ -45,7 +45,8 @@ public partial class Board : Form{
 				id.Size      = tiles[y * board.Height + x].Size;
 				id.TextAlign = ContentAlignment.MiddleCenter;
 
-				tiles[y * board.Height + x].Controls.Add(id);
+
+				tiles[y * board.Height + x].Click += (_, _) => MessageBox.Show("fr fr");
 
 				panel.Controls.Add(tiles[y * board.Height + x]);
 			}
@@ -74,8 +75,6 @@ public partial class Board : Form{
 		Controls.Owner.BackColor = Color.FromArgb(41, 28, 140);
 		Controls.Owner.Size      = new Size(1280, 720);
 		Controls.Owner.Font      = new Font("Calibri", 20, FontStyle.Bold);
-		FormBorderStyle          = FormBorderStyle.None;
-		WindowState              = FormWindowState.Maximized;
 	}
 
 
